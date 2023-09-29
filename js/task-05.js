@@ -13,6 +13,12 @@ const createBtn = document.querySelector("button[data-create]");
 const destroyBtn = document.querySelector("button[data-destroy]");
 
 const createBoxes = (amount) => {
+  if (Number(input.value) < 1 || Number(input.value) > 100) {
+    alert("Enter number in range of 1-100");
+    input.value = "";
+    return;
+  }
+
   amount = input.value;
   let widthAndHeigthStartRef = 30;
 
